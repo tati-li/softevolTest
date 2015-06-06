@@ -1,0 +1,20 @@
+@import "sass partials/reset";
+
+$icon-font-path: "bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
+@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@import "pages/addCustomer/addCustomer";
+
+.error-message {
+  color: rgb(211, 3, 38);
+  font-weight: bold;
+  padding-left: 106px;
+}
+
+.success {
+  background-color: #c1ff8d;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}

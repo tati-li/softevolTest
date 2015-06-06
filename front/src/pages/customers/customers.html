@@ -1,0 +1,31 @@
+<h1>Customers List</h1>
+<button type="button" class="btn btn-success btn-sm" ng-click="addCustomer()">New</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Telephone</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip</th>
+            <th>Edit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="cust in customers">
+            <td>{{cust.name}}</td>
+            <td>{{cust.email}}</td>
+            <td>{{cust.telephone}}</td>
+            <td>{{cust.address}}</td>
+            <td>{{cust.city}}</td>
+            <td>{{cust.state}}</td>
+            <td>{{cust.zip}}</td>
+            <td>
+                <button type="button" class="btn btn-success btn-sm" ng-click="editCustomer(cust.id)">Edit</button>
+                <button type="button" class="btn btn-danger btn-sm" ng-click="deleteCustomer(cust.id, cust.name)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
