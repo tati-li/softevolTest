@@ -1,6 +1,6 @@
 'use strict';
 
-var gulp       = require('gulp'),
+var gulp     = require('gulp'),
   concat     = require('gulp-concat'),
   del        = require('del'),
   uglify     = require('gulp-uglify'),

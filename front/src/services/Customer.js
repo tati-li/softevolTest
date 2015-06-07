@@ -1,5 +1,7 @@
 app.service('Customer', ['$q', '$http', function ($q, $http) {
 
+  // @todo: rename getData to getAllCustomers, getById on getCustomerById
+
   return {
 
     /**

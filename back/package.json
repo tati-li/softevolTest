@@ -7,6 +7,6 @@
     "express": "^4.12.4"
   },
   "scripts": {
-    "init-project": "npm install npm -g && npm install -g bower && npm i && cd ../front && npm i && bower i"
+    "init-project": "npm install npm -g && npm install -g bower && npm i && cd ../front && npm i && bower i && gulp && cd ../back && node server"
   }
 }

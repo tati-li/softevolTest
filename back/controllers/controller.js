@@ -1,5 +1,8 @@
-var fs   = require('fs'),
-    path = __dirname + '/' + "customers.json";
+var fs     = require('fs'),
+    config = require('../config'),
+    path   = config.paths.customers;
+
+// @todo: change console.log(err) error handling on res.end(err.message) way.
 
 exports.getAllCustomers = function (req, res) {
   fs.readFile(path, 'utf8', function (err, data) {
