@@ -2,14 +2,12 @@ var fs     = require('fs'),
     config = require('../config'),
     path   = config.paths.customers;
 
-// @todo: change console.log(err) error handling on res.end(err.message) way.
-
 exports.getAllCustomers = function (req, res) {
   fs.readFile(path, 'utf8', function (err, data) {
     if (!err) {
       res.end(data);
     } else {
-      console.log(err);
+      res.end(err.message);
     }
   });
 };
@@ -23,7 +21,7 @@ exports.getCustomerById = function (req, res) {
       });
       res.end( JSON.stringify(customer));
     } else {
-      console.log(err);
+      res.end(err.message);
     }
   });
 };
@@ -39,7 +37,7 @@ exports.addCustomer = function (req, res) {
       });
       res.end( JSON.stringify(custList));
     } else {
-      console.log(err);
+      res.end(err.message);
     }
   });
 };
@@ -55,7 +53,7 @@ exports.updateCustomer = function (req, res) {
       });
       res.end( JSON.stringify(customers));
     } else {
-      console.log(err);
+      res.end(err.message);
     }
   });
 };
@@ -73,7 +71,7 @@ exports.deleteCustomer = function (req, res) {
       });
       res.end(JSON.stringify(customer));
     } else {
-      console.log(err);
+      res.end(err.message);
     }
   });
 };

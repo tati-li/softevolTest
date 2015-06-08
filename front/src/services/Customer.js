@@ -1,14 +1,12 @@
 app.service('Customer', ['$q', '$http', function ($q, $http) {
 
-  // @todo: rename getData to getAllCustomers, getById on getCustomerById
-
   return {
 
     /**
      *
      * @returns {*|Prompt}
      */
-    getData: function(){
+    getAllCustomers: function(){
       return $http.get('/api/customers').
         success(function(data, status, headers, config) {
           return data;
@@ -22,7 +20,7 @@ app.service('Customer', ['$q', '$http', function ($q, $http) {
      * @param id
      * @returns {promise|*|promise|promise|Function|promise}
      */
-    getById: function(id){
+    getCustomerById: function(id){
       var res = $q.defer();
 
       $http.get('/api/customer/' + id).

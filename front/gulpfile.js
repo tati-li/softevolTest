@@ -109,4 +109,5 @@ gulp.task('watch', ['clean', 'appHtml', 'appScripts', 'appLibs', 'appStyles'], f
   gulp.watch(paths.src.html, ['appHtml']);
   gulp.watch(paths.src.templates, ['appHtml'])
 });
+
 gulp.task('default', ['clean', 'appHtml', 'appScripts', 'appLibs', 'appStyles', 'watch']);

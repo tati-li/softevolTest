@@ -7,7 +7,7 @@ app.controller('EditCustomerCtrl',['$scope', 'Customer', '$stateParams', 'custom
 
   var idParam = $stateParams.id || customerId;
 
-  Customer.getById(idParam).then(function(result){
+  Customer.getCustomerById(idParam).then(function(result){
     $scope.customer = result[0];
   });
 

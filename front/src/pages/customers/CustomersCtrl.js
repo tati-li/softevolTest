@@ -2,7 +2,7 @@ app.controller('CustomersCtrl',['$scope', 'Customer', '$modal', function($scope,
 
   $scope.customers = [];
 
-  Customer.getData().then(function(result){
+  Customer.getAllCustomers().then(function(result){
     $scope.customers = result.data;
   });
 
